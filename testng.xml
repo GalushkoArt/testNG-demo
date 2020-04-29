@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="simple tests">
+        <parameter name="a" value="2" />
+        <parameter name="b" value="3" />
+        <parameter name="res" value="4" />
+
+        <groups>
+            <define name="all">
+                <include name="multi" />
+                <include name="sum" />
+            </define>
+            <run>
+                <include name="all" />
+                <exclude name="sum"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="SimpleTest"/>
+        </classes>
+    </test>
+</suite>

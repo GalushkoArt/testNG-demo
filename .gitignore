@@ -1,0 +1,10 @@
+# Project exclude paths
+/target/
+.idea/
+.idea
+.repository/
+
+*.iws
+*.class
+*.properties
+*.jar
